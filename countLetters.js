@@ -1,7 +1,7 @@
 const countLetters = (string) => {
-  const results = {}
-  for (letter of string){
-    if (letter !== " "){
+  const results = {};
+  for (let letter of string) {
+    if (letter !== " ") {
       if (results[letter]) {
         results[letter] += 1;
       } else {
@@ -9,7 +9,7 @@ const countLetters = (string) => {
       }
     }
   }
-  console.log(results);
-}
+  return results;
+};
 
 countLetters("lighthouse in the house");
