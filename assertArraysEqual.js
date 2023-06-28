@@ -9,16 +9,23 @@ const assertEqual = function(firstArray, secondArray){
 }
 
 const eqArrays = function(firstArray, secondArray) {
-  let result;
+  if (firstArray === secondArray){
+    return true;
+  }
+  if (firstArray.length !== secondArray.length){
+    return false;
+  }
+  if (firstArray == null || secondArray == null){
+    return false;
+  }
+  let result = true;
   for (let i = 0; i < firstArray.length; i++) {
     if (firstArray[i] !== secondArray[i]) {
       return false;
-    } else {
-      result = true;
     }
   }
   return result;
-};
+}
 
 (assertEqual([1, 2, 3], [1, 2, 3]));
 (assertEqual([1, 2, 3], [3, 2, 1]));
