@@ -7,7 +7,7 @@ const assertEqual = (actual, expected) => {
 };
 
 const countOnly = (allItems,itemsToCount) => {
-  const results = {}
+  const results = {};
 
   for (const item of allItems) { // Loops through firstNames list
     if (itemsToCount[item]) { //Checks if item on the list is True/False
@@ -19,16 +19,8 @@ const countOnly = (allItems,itemsToCount) => {
     }
   }
 
-/*   for (const item of allItems) { //looping everything, ignoring if itemsToCount is true or false
-    if (results[item]) {
-      results[item] += 1;
-    } else {
-      results[item] = 1;
-    }
-  } */
-
-return results;
-}
+  return results;
+};
 
 const firstNames = [
   "Karl",

@@ -1,11 +1,11 @@
 const eqArrays = function(firstArray, secondArray) {
-  if (firstArray === secondArray){
+  if (firstArray === secondArray) {
     return true;
   }
-  if (firstArray.length !== secondArray.length){
+  if (firstArray.length !== secondArray.length) {
     return false;
   }
-  if (firstArray == null || secondArray == null){
+  if (firstArray === null || secondArray === null) {
     return false;
   }
   let result = true;
@@ -13,9 +13,9 @@ const eqArrays = function(firstArray, secondArray) {
     if (firstArray[i] !== secondArray[i]) {
       return false;
     }
-  }
-  return result;
-}
+  } return result;
+};
+
 
 
 
