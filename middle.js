@@ -1,37 +1,35 @@
 const middle = (array) => {
-  let newArray = []
-  if (array.length <= 2){ // array length 2 or less
+  let newArray = [];
+  if (array.length <= 2) { // array length 2 or less
     return newArray;
   } else { // array length more than 2
     if (array.length % 2 === 0) { // even
       newArray.push(array[(array.length / 2) - 1]);
       newArray.push(array[(array.length / 2)]);
-    }
-    else {
+    } else {
       newArray.push(array[(array.length - 1) / 2]);
     }
-    return newArray
+    return newArray;
   }
-}
+};
 
-const assertEqual = function(firstArray, secondArray){
+const assertEqual = function(firstArray, secondArray) {
   let result = eqArrays(firstArray, secondArray);
-  if (result == true){
-    console.log(`✅✅✅ Assertion Passed: ${firstArray} === ${secondArray}`)
+  if (result === true) {
+    console.log(`✅✅✅ Assertion Passed: ${firstArray} === ${secondArray}`);
+  } else {
+    console.log(`🛑🛑🛑 Assertion failed: ${firstArray} !== ${secondArray}`);
   }
-  else {
-    console.log(`🛑🛑🛑 Assertion failed: ${firstArray} !== ${secondArray}`)
-  }
-}
+};
 
 const eqArrays = function(firstArray, secondArray) {
-  if (firstArray === secondArray){
+  if (firstArray === secondArray) {
     return true;
   }
-  if (firstArray.length !== secondArray.length){
+  if (firstArray.length !== secondArray.length) {
     return false;
   }
-  if (firstArray == null || secondArray == null){
+  if (firstArray === null || secondArray === null) {
     return false;
   }
   let result = true;
@@ -41,7 +39,7 @@ const eqArrays = function(firstArray, secondArray) {
     }
   }
   return result;
-}
+};
 
 assertEqual(middle([1]), []);
 assertEqual(middle([1, 2]), []);
