@@ -46,11 +46,11 @@ const map = function(array, callback) {
   return results;
 };
 
-/* const results1 =  */map(words, word => word[0]);
+const results1 = map(words, word => word[0]);
 
 /* console.log(results1); */
 
-(assertEqual(map(words, word => word[0]), [ 'g', 'c', 't', 'm', 't' ]));
+(assertEqual(results1, [ 'g', 'c', 't', 'm', 't' ]));
 
 //Short way
 /* const results1 = words.map(word => word[0]);
